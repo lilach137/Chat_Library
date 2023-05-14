@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#BAD2D5"
+    tools:context=".Activity_chat">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/send"
+        android:gravity="center_horizontal"
+
+        android:orientation="vertical">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/chatFragment_RCYC_LST"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:stackFromEnd="true"
+                tools:listitem="@layout/list_chat"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </ScrollView>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/send"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="5dp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_weight="14"
+            android:background="@drawable/cover_chat"
+            android:backgroundTint="@color/white"
+            android:orientation="horizontal">
+
+
+            <FrameLayout
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="bottom"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                android:background="@drawable/cover_chat"
+                android:backgroundTint="#ADCAD1"
+                android:clickable="true">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/sendButton_IMG_send"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="2"
+                    android:clickable="true"
+                    android:src="@drawable/ic_back" />
+            </FrameLayout>
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/speaking_TIETL_msg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:background="@drawable/cover_chat"
+                android:backgroundTint="@color/white"
+                android:fontFamily="@font/font"
+                android:gravity="center_vertical"
+                android:hint="הודעה חדשה"
+                android:imeOptions="actionDone"
+                android:maxHeight="100dp"
+                android:padding="10dp"
+                android:text=""
+                android:textColor="#5B5252" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</RelativeLayout>
+

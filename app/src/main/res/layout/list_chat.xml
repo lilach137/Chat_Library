@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/listMessage"
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    >
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/listMessage_card"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:elevation="0dp"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="0dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="start"
+            android:orientation="horizontal">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/listMessage_LBL_msg"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start|center_vertical"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="5dp"
+                android:fontFamily="@font/font"
+                android:gravity="center_vertical|start"
+                android:padding="5dp"
+                android:text="Hi how are you?"
+                android:textColor="#BAD2D5"
+                android:textSize="13dp" />
+
+
+            <LinearLayout
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end|bottom"
+                android:orientation="horizontal">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/listMessage_LBL_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom|start"
+                    android:fontFamily="@font/font"
+                    android:gravity="start|center_vertical"
+                    android:text="21:46 2.3.23"
+                    android:textColor="#BAD2D5"
+                    android:textSize="12dp" />
+
+
+            </LinearLayout>
+        </LinearLayout>
+
+
+    </com.google.android.material.card.MaterialCardView>
+</LinearLayout>
